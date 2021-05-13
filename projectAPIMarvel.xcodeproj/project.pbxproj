@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94A29F21264DADBD0058AEC9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 94A29F20264DADBD0058AEC9 /* Kingfisher */; };
+		94A29F25264DAF860058AEC9 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A29F24264DAF860058AEC9 /* ApiService.swift */; };
 		ABB14ECF264C82D30017A24B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14ECE264C82D30017A24B /* AppDelegate.swift */; };
 		ABB14ED1264C82D30017A24B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14ED0264C82D30017A24B /* SceneDelegate.swift */; };
 		ABB14ED3264C82D30017A24B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14ED2264C82D30017A24B /* ViewController.swift */; };
@@ -17,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94A29F24264DAF860058AEC9 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		ABB14ECB264C82D30017A24B /* projectAPIMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectAPIMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB14ECE264C82D30017A24B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB14ED0264C82D30017A24B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A29F21264DADBD0058AEC9 /* Kingfisher in Frameworks */,
 				ABB14EE5264C85A60017A24B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94A29F23264DAF6C0058AEC9 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				94A29F24264DAF860058AEC9 /* ApiService.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 		ABB14EC2264C82D30017A24B = {
 			isa = PBXGroup;
 			children = (
@@ -63,10 +75,7 @@
 				ABB14EE7264C8AD00017A24B /* controller */,
 				ABB14ECE264C82D30017A24B /* AppDelegate.swift */,
 				ABB14ED0264C82D30017A24B /* SceneDelegate.swift */,
-				ABB14ED2264C82D30017A24B /* ViewController.swift */,
-				ABB14ED4264C82D40017A24B /* Main.storyboard */,
 				ABB14ED7264C82D50017A24B /* Assets.xcassets */,
-				ABB14ED9264C82D50017A24B /* LaunchScreen.storyboard */,
 				ABB14EDC264C82D50017A24B /* Info.plist */,
 			);
 			path = projectAPIMarvel;
@@ -75,6 +84,7 @@
 		ABB14EE7264C8AD00017A24B /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				ABB14ED2264C82D30017A24B /* ViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -82,6 +92,7 @@
 		ABB14EE8264C8AE10017A24B /* model */ = {
 			isa = PBXGroup;
 			children = (
+				94A29F23264DAF6C0058AEC9 /* network */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -89,6 +100,8 @@
 		ABB14EE9264C8AF20017A24B /* view */ = {
 			isa = PBXGroup;
 			children = (
+				ABB14ED9264C82D50017A24B /* LaunchScreen.storyboard */,
+				ABB14ED4264C82D40017A24B /* Main.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -111,6 +124,7 @@
 			name = projectAPIMarvel;
 			packageProductDependencies = (
 				ABB14EE4264C85A60017A24B /* Alamofire */,
+				94A29F20264DADBD0058AEC9 /* Kingfisher */,
 			);
 			productName = projectAPIMarvel;
 			productReference = ABB14ECB264C82D30017A24B /* projectAPIMarvel.app */;
@@ -141,6 +155,7 @@
 			mainGroup = ABB14EC2264C82D30017A24B;
 			packageReferences = (
 				ABB14EE3264C85A60017A24B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				94A29F1F264DADBD0058AEC9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = ABB14ECC264C82D30017A24B /* Products */;
 			projectDirPath = "";
@@ -171,6 +186,7 @@
 			files = (
 				ABB14ED3264C82D30017A24B /* ViewController.swift in Sources */,
 				ABB14ECF264C82D30017A24B /* AppDelegate.swift in Sources */,
+				94A29F25264DAF860058AEC9 /* ApiService.swift in Sources */,
 				ABB14ED1264C82D30017A24B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +389,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		94A29F1F264DADBD0058AEC9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
 		ABB14EE3264C85A60017A24B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -384,6 +408,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		94A29F20264DADBD0058AEC9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94A29F1F264DADBD0058AEC9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		ABB14EE4264C85A60017A24B /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ABB14EE3264C85A60017A24B /* XCRemoteSwiftPackageReference "Alamofire" */;
