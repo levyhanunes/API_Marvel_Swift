@@ -58,6 +58,9 @@
 		ABB14ECD264C82D30017A24B /* projectAPIMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				ABB14EE9264C8AF20017A24B /* view */,
+				ABB14EE8264C8AE10017A24B /* model */,
+				ABB14EE7264C8AD00017A24B /* controller */,
 				ABB14ECE264C82D30017A24B /* AppDelegate.swift */,
 				ABB14ED0264C82D30017A24B /* SceneDelegate.swift */,
 				ABB14ED2264C82D30017A24B /* ViewController.swift */,
@@ -67,6 +70,27 @@
 				ABB14EDC264C82D50017A24B /* Info.plist */,
 			);
 			path = projectAPIMarvel;
+			sourceTree = "<group>";
+		};
+		ABB14EE7264C8AD00017A24B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		ABB14EE8264C8AE10017A24B /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		ABB14EE9264C8AF20017A24B /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
