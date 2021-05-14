@@ -16,19 +16,19 @@ class ApiService {
     let publicKey = "d9170f7cc7317a4f78fcc0323c3c7d15"
     let ts = String(Date().timeIntervalSince1970)
     
-    
+    // MARK: - Request
     public func apiRequest() {
         
         let parameters = ["ts": ts, "hash" : self.getMD5(),  "apikey" : publicKey]
         
         let request = AF.request(baseURL, parameters: parameters)
-        // 2
-        request.responseJSON { (data) in
-            print(data)
+        request.responseJSON { (data) in print(data)
+        let characters = try! JSONDecoder().decode(Characters.self, from: data.data!)
+            print(characters.data.results)
             
         }
     }
-    
+    // MARK: - MD5
     private func getMD5() -> String {
         let apiData = ts + privateKey + publicKey
         guard let data = apiData.data(using: .utf8) else { return String() }
