@@ -11,20 +11,29 @@ import CryptoKit
 
 class ApiService {
     public static let get = HTTPMethod(rawValue: "GET")
-    let baseURL: String = "http://gateway.marvel.com/v1/public/characters"
     let privateKey = "458e3dedc56e090294f35a8c16abfa63bee16b11"
     let publicKey = "d9170f7cc7317a4f78fcc0323c3c7d15"
     let ts = String(Date().timeIntervalSince1970)
     
     // MARK: - Request
-    public func apiRequest() {
+    public func apiRequest(id : Int) {
         
         let parameters = ["ts": ts, "hash" : self.getMD5(),  "apikey" : publicKey]
-        
+        let baseURL: String = "http://gateway.marvel.com/v1/public/characters/\(id)"
         let request = AF.request(baseURL, parameters: parameters)
         request.responseJSON { (data) in print(data)
-        let characters = try! JSONDecoder().decode(Characters.self, from: data.data!)
-            print(characters.data.results)
+        let characters = try! JSONDecoder().decode(ReturnApi.self, from: data.data!)
+            
+        }
+    }
+    // MARK: - Request2
+    public func apiRequest2(name : String) {
+        
+        let parameters = ["ts": ts, "hash" : self.getMD5(),  "apikey" : publicKey]
+        let baseURL: String = "http://gateway.marvel.com/v1/public/characters?name=\(name)"
+        let request = AF.request(baseURL, parameters: parameters)
+        request.responseJSON { (data) in print(data)
+        let characters = try! JSONDecoder().decode(ReturnApi.self, from: data.data!)
             
         }
     }
