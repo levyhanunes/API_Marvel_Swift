@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     var apiRequest = ApiService()
     override func viewDidLoad() {
         super.viewDidLoad()
-        apiRequest.apiRequest()
+        apiRequest.apiRequest2(name: "Iron%20Man")
         // Do any additional setup after loading the view.
     }
 

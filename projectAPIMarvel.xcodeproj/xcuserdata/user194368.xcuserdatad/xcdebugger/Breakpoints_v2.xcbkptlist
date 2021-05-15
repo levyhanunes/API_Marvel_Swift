@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "09B88587-C850-4DE1-B9A1-D36AD257E850"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "projectAPIMarvel/model/network/ApiService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "ApiService"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "78502E27-7C40-44AE-A934-D474B1DD2C75"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -39,81 +23,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "678477D3-D70A-44A5-B3BE-BAAC31A29328"
-            shouldBeEnabled = "No"
+            uuid = "EAA352A3-4E85-4984-B3BF-921720C629CE"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "projectAPIMarvel/model/network/ApiService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "apiRequest()"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "apiRequest(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "348B436B-D920-4916-A2CF-543A5C1AD6FF"
-            shouldBeEnabled = "No"
+            uuid = "E3D12426-75CA-40AE-93F3-5E99BF4A49B1"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "projectAPIMarvel/model/network/ApiService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "apiRequest()"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "apiRequest2(name:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C236BB01-94F9-4F3B-9815-8F809DAC709E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "projectAPIMarvel/model/network/ApiService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "apiRequest()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C236BB01-94F9-4F3B-9815-8F809DAC709E - 69872fc7818dcdbd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "projectAPIMarvel.ApiService.apiRequest() -&gt; ()"
-                  moduleName = "projectAPIMarvel"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user194368/Desktop/API_Marvel_Swift/projectAPIMarvel/model/network/ApiService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "679">
-               </Location>
-               <Location
-                  uuid = "C236BB01-94F9-4F3B-9815-8F809DAC709E - c595c4610991b0e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in projectAPIMarvel.ApiService.apiRequest() -&gt; ()"
-                  moduleName = "projectAPIMarvel"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user194368/Desktop/API_Marvel_Swift/projectAPIMarvel/model/network/ApiService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
