@@ -8,7 +8,7 @@
 import Foundation
 
  // MARK: - ReturnApi
- struct ReturnApi: Codable {
+ struct ReturnApi: Decodable {
      let copyright, attributionText: String
      let code : Int
      let attributionHTML: String
@@ -17,13 +17,13 @@ import Foundation
  }
 
  // MARK: - DataClass
- struct DataClass: Codable {
+ struct DataClass: Decodable {
      let offset, limit, total, count: Int
      let results: [Result]
  }
 
  // MARK: - Result
- struct Result: Codable {
+ struct Result: Decodable {
     let id: Int
     let modified, name, resourceURI, description: String
     let thumbnail: Thumbnail
@@ -32,19 +32,14 @@ import Foundation
         case id
         case modified, name, resourceURI, thumbnail, description
  }
-
-
-// MARK: -Heros
-struct Heros: Codable{
-
-    }
 }
 
-struct Thumbnail: Codable {
-    let path: String
-    let xtension = "extension"
-    enum CodingKeys: String, CodingKey{
-        case xtension, path
-    }
+//MARK: - Thumbnail
+
+struct Thumbnail: Decodable {
+    let path, fileExtension: String
     
+    enum CodingKeys: String, CodingKey{
+        case fileExtension = "extension", path
+    }
 }

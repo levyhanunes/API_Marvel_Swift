@@ -8,13 +8,27 @@
 import UIKit
 import CryptoKit
 class ViewController: UIViewController {
+    @IBOutlet weak var Label: UILabel!
     var apiRequest = ApiService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        apiRequest.apiRequest2(name: "Iron%20Man")
-        // Do any additional setup after loading the view.
+        apiRequest.delegate = self
+        apiRequest.apiRequest(id: 1009368)
+        
     }
-
-
 }
 
+ // MARK: - EXTENSION
+extension ViewController: ApiResponse {
+    func success() {
+        Label.text = apiRequest.charactersResponse?.data.results[0].name
+    }
+    
+    func error() {
+        print("Error")
+    }
+    
+       
+    
+}
