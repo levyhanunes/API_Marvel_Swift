@@ -8,7 +8,7 @@
 import Foundation
 
  // MARK: - ReturnApi
- struct ReturnApi: Decodable {
+ struct ReturnApi: Codable {
      let copyright, attributionText: String
      let code : Int
      let attributionHTML: String
@@ -17,13 +17,13 @@ import Foundation
  }
 
  // MARK: - DataClass
- struct DataClass: Decodable {
+ struct DataClass: Codable {
      let offset, limit, total, count: Int
      let results: [Result]
  }
 
  // MARK: - Result
- struct Result: Decodable {
+ struct Result: Codable {
     let id: Int
     let modified, name, resourceURI, description: String
     let thumbnail: Thumbnail
@@ -36,7 +36,7 @@ import Foundation
 
 //MARK: - Thumbnail
 
-struct Thumbnail: Decodable {
+struct Thumbnail: Codable {
     let path, fileExtension: String
     
     enum CodingKeys: String, CodingKey{

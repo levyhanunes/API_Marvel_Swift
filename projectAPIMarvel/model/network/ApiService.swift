@@ -10,7 +10,7 @@ import Alamofire
 import CryptoKit
 
 protocol ApiResponse {
-    func success()
+    func success() 
     func error()
 }
 
@@ -27,31 +27,21 @@ class ApiService {
     public func apiRequest(id: Int){
         let parameters = ["ts": ts, "hash" : self.getMD5(),  "apikey" : publicKey]
         let baseURL: String = "http://gateway.marvel.com/v1/public/characters"
-        let request = AF.request(baseURL, parameters: parameters)
-        request.responseDecodable(of: ReturnApi.self){ result in
-            guard let characters = result.value else {return}
-            print(characters)
-            self.charactersResponse = characters
+        let request = AF.request(baseURL, parameters: parameters).responseJSON(completionHandler: { (data) in
+            let result = try? JSONDecoder().decode(ReturnApi.self, from: data.data!)
+            self.charactersResponse = result
             if (self.charactersResponse == nil) {
-                
                 self.delegate?.error()
+            }else{
+                
+                self.delegate?.success()
             }
-            self.delegate?.success()
             
-        }
+
+        })
         
     }
-    // MARK: - Request2
-    public func apiRequest2(name : String) {
-        
-        let parameters = ["ts": ts, "hash" : self.getMD5(),  "apikey" : publicKey]
-        let baseURL: String = "http://gateway.marvel.com/v1/public/characters?name=\(name)"
-        let request = AF.request(baseURL, parameters: parameters)
-        request.responseDecodable(of: ReturnApi.self){ result in
-            guard let characters = result.value else {return}
-            
-        }
-    }
+
     // MARK: - MD5
     private func getMD5() -> String {
         let apiData = ts + privateKey + publicKey
