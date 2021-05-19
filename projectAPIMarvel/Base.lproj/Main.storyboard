@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oJA-Bh-I53">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
+                                <rect key="frame" x="0.0" y="154" width="390" height="656"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharactersCell" id="HTK-vY-qpV">
@@ -83,21 +83,48 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="t2x-qo-XVO">
+                                <rect key="frame" x="0.0" y="98" width="390" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E3U-xc-rIE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="E3U-xc-rIE" firstAttribute="trailing" secondItem="oJA-Bh-I53" secondAttribute="trailing" id="3bV-0W-uMD"/>
                             <constraint firstItem="E3U-xc-rIE" firstAttribute="bottom" secondItem="oJA-Bh-I53" secondAttribute="bottom" id="6bP-Ej-n5g"/>
+                            <constraint firstItem="t2x-qo-XVO" firstAttribute="top" secondItem="E3U-xc-rIE" secondAttribute="top" constant="10" id="Byb-8J-SRU"/>
+                            <constraint firstItem="t2x-qo-XVO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E3U-xc-rIE" secondAttribute="leading" id="MN5-oB-eh8"/>
+                            <constraint firstItem="t2x-qo-XVO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E3U-xc-rIE" secondAttribute="trailing" id="OcO-GJ-lPq"/>
+                            <constraint firstItem="oJA-Bh-I53" firstAttribute="top" secondItem="t2x-qo-XVO" secondAttribute="bottom" id="dEY-aM-uw8"/>
+                            <constraint firstItem="t2x-qo-XVO" firstAttribute="centerX" secondItem="B6Y-bQ-0Ea" secondAttribute="centerX" id="gj3-ax-ICJ"/>
                             <constraint firstItem="oJA-Bh-I53" firstAttribute="leading" secondItem="E3U-xc-rIE" secondAttribute="leading" id="kIt-fZ-Nqp"/>
-                            <constraint firstItem="oJA-Bh-I53" firstAttribute="top" secondItem="B6Y-bQ-0Ea" secondAttribute="top" id="vrg-Ls-8xs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Personagens" id="FTk-y9-AC9"/>
+                    <connections>
+                        <segue destination="2ZA-je-p88" kind="show" id="K9N-2r-d3h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO9-Ft-s9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1154" y="-66"/>
+            <point key="canvasLocation" x="-1100" y="-58"/>
+        </scene>
+        <!--Description-->
+        <scene sceneID="UDM-CS-iNZ">
+            <objects>
+                <viewController id="2ZA-je-p88" userLabel="Description" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aAR-KJ-idJ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="c1A-K4-ooL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZJE-DF-MtN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5fW-Vp-dr6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-262" y="-58"/>
         </scene>
     </scenes>
     <resources>
