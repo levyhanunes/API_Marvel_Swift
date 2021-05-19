@@ -31,7 +31,7 @@ class ApiService {
             let result = try? JSONDecoder().decode(ReturnApi.self, from: data.data!)
             if (result?.data.results != nil){
                 self.character = result!.data.results
-                if (self.character == nil) {
+                if (self.character.isEmpty) {
                     self.delegate?.error()
                 }else{
                     
