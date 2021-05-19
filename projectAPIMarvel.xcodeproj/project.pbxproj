@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB88F11B264DA50D0097B9B5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB88F11A264DA50D0097B9B5 /* APIService.swift */; };
 		AB88F11E264DACC60097B9B5 /* SearchCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB88F11D264DACC60097B9B5 /* SearchCharacters.swift */; };
 		AB88F123264DADEB0097B9B5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AB88F122264DADEB0097B9B5 /* Kingfisher */; };
-		AB88F12F264DD5E60097B9B5 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB88F12E264DD5E60097B9B5 /* Credentials.swift */; };
 		AB88F137264DF6C10097B9B5 /* networkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB88F136264DF6C10097B9B5 /* networkService.swift */; };
 		ABB14ECF264C82D30017A24B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14ECE264C82D30017A24B /* AppDelegate.swift */; };
 		ABB14ED1264C82D30017A24B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14ED0264C82D30017A24B /* SceneDelegate.swift */; };
@@ -22,9 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB88F11A264DA50D0097B9B5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		AB88F11D264DACC60097B9B5 /* SearchCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCharacters.swift; sourceTree = "<group>"; };
-		AB88F12E264DD5E60097B9B5 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		AB88F136264DF6C10097B9B5 /* networkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkService.swift; sourceTree = "<group>"; };
 		ABB14ECB264C82D30017A24B /* projectAPIMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectAPIMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB14ECE264C82D30017A24B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +48,6 @@
 		AB88F119264DA4F00097B9B5 /* api */ = {
 			isa = PBXGroup;
 			children = (
-				AB88F11A264DA50D0097B9B5 /* APIService.swift */,
 				AB88F136264DF6C10097B9B5 /* networkService.swift */,
 			);
 			path = api;
@@ -83,8 +78,6 @@
 				ABB14EE7264C8AD00017A24B /* controller */,
 				ABB14ECE264C82D30017A24B /* AppDelegate.swift */,
 				ABB14ED0264C82D30017A24B /* SceneDelegate.swift */,
-				ABB14ED2264C82D30017A24B /* ViewController.swift */,
-				ABB14ED4264C82D40017A24B /* Main.storyboard */,
 				ABB14ED7264C82D50017A24B /* Assets.xcassets */,
 				ABB14ED9264C82D50017A24B /* LaunchScreen.storyboard */,
 				ABB14EDC264C82D50017A24B /* Info.plist */,
@@ -95,6 +88,7 @@
 		ABB14EE7264C8AD00017A24B /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				ABB14ED2264C82D30017A24B /* ViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -103,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				AB88F11D264DACC60097B9B5 /* SearchCharacters.swift */,
-				AB88F12E264DD5E60097B9B5 /* Credentials.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -111,6 +104,7 @@
 		ABB14EE9264C8AF20017A24B /* view */ = {
 			isa = PBXGroup;
 			children = (
+				ABB14ED4264C82D40017A24B /* Main.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -194,11 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABB14ED3264C82D30017A24B /* ViewController.swift in Sources */,
-				AB88F12F264DD5E60097B9B5 /* Credentials.swift in Sources */,
 				AB88F137264DF6C10097B9B5 /* networkService.swift in Sources */,
 				ABB14ECF264C82D30017A24B /* AppDelegate.swift in Sources */,
 				AB88F11E264DACC60097B9B5 /* SearchCharacters.swift in Sources */,
-				AB88F11B264DA50D0097B9B5 /* APIService.swift in Sources */,
 				ABB14ED1264C82D30017A24B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
