@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import CryptoKit
 
 class ViewController: UIViewController {
 
+    
+    var apiRequest = ApiServicee()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        apiRequest.apiRequest()
+        
     }
 
 
