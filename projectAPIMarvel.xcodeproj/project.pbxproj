@@ -58,39 +58,40 @@
 		ABB14ECD264C82D30017A24B /* projectAPIMarvel */ = {
 			isa = PBXGroup;
 			children = (
-				ABB14EE9264C8AF20017A24B /* view */,
-				ABB14EE8264C8AE10017A24B /* model */,
-				ABB14EE7264C8AD00017A24B /* controller */,
+				ABB14EE8264C8AE10017A24B /* Models */,
+				ABB14EE7264C8AD00017A24B /* Controllers */,
+				ABB14EE9264C8AF20017A24B /* Views */,
+				ABB14EDC264C82D50017A24B /* Info.plist */,
 				ABB14ECE264C82D30017A24B /* AppDelegate.swift */,
 				ABB14ED0264C82D30017A24B /* SceneDelegate.swift */,
 				ABB14ED2264C82D30017A24B /* ViewController.swift */,
 				ABB14ED4264C82D40017A24B /* Main.storyboard */,
 				ABB14ED7264C82D50017A24B /* Assets.xcassets */,
 				ABB14ED9264C82D50017A24B /* LaunchScreen.storyboard */,
-				ABB14EDC264C82D50017A24B /* Info.plist */,
 			);
 			path = projectAPIMarvel;
 			sourceTree = "<group>";
 		};
-		ABB14EE7264C8AD00017A24B /* controller */ = {
+		ABB14EE7264C8AD00017A24B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		ABB14EE8264C8AE10017A24B /* model */ = {
+		ABB14EE8264C8AE10017A24B /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = model;
+			name = Models;
+			path = view/Models;
 			sourceTree = "<group>";
 		};
-		ABB14EE9264C8AF20017A24B /* view */ = {
+		ABB14EE9264C8AF20017A24B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = view;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
