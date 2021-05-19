@@ -32,19 +32,14 @@ import Foundation
         case id
         case modified, name, resourceURI, thumbnail, description
  }
-
-
-// MARK: -Heros
-struct Heros: Codable{
-
-    }
 }
 
+//MARK: - Thumbnail
+
 struct Thumbnail: Codable {
-    let path: String
-    let xtension = "extension"
-    enum CodingKeys: String, CodingKey{
-        case xtension, path
-    }
+    let path, fileExtension: String
     
+    enum CodingKeys: String, CodingKey{
+        case fileExtension = "extension", path
+    }
 }

@@ -9,34 +9,38 @@ import UIKit
 import Alamofire
 import CryptoKit
 
+protocol ApiResponse {
+    func success() 
+    func error()
+}
+
+
 class ApiService {
-    public static let get = HTTPMethod(rawValue: "GET")
     let privateKey = "458e3dedc56e090294f35a8c16abfa63bee16b11"
     let publicKey = "d9170f7cc7317a4f78fcc0323c3c7d15"
     let ts = String(Date().timeIntervalSince1970)
+    var character: [Result] = []
+    var delegate: ApiResponse?
     
     // MARK: - Request
-    public func apiRequest(id : Int) {
-        
+    
+    public func apiRequest(id: Int){
         let parameters = ["ts": ts, "hash" : self.getMD5(),  "apikey" : publicKey]
-        let baseURL: String = "http://gateway.marvel.com/v1/public/characters/\(id)"
-        let request = AF.request(baseURL, parameters: parameters)
-        request.responseJSON { (data) in print(data)
-        let characters = try! JSONDecoder().decode(ReturnApi.self, from: data.data!)
-            
-        }
+        let baseURL: String = "http://gateway.marvel.com/v1/public/characters"
+        _ = AF.request(baseURL, parameters: parameters).responseJSON(completionHandler: { (data) in
+            let result = try? JSONDecoder().decode(ReturnApi.self, from: data.data!)
+            if (result?.data.results != nil){
+                self.character = result!.data.results
+                if (self.character == nil) {
+                    self.delegate?.error()
+                }else{
+                    
+                    self.delegate?.success()
+                }
+            }
+        })
     }
-    // MARK: - Request2
-    public func apiRequest2(name : String) {
-        
-        let parameters = ["ts": ts, "hash" : self.getMD5(),  "apikey" : publicKey]
-        let baseURL: String = "http://gateway.marvel.com/v1/public/characters?name=\(name)"
-        let request = AF.request(baseURL, parameters: parameters)
-        request.responseJSON { (data) in print(data)
-        let characters = try! JSONDecoder().decode(ReturnApi.self, from: data.data!)
-            
-        }
-    }
+
     // MARK: - MD5
     private func getMD5() -> String {
         let apiData = ts + privateKey + publicKey
