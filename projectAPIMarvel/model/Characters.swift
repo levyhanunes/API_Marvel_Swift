@@ -39,6 +39,7 @@ import Foundation
 struct Thumbnail: Codable {
     let path, fileExtension: String
     
+    public var url: String {return "\(path).\(fileExtension)"}
     enum CodingKeys: String, CodingKey{
         case fileExtension = "extension", path
     }

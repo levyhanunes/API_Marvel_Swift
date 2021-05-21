@@ -8,6 +8,7 @@
 import UIKit
 import CryptoKit
 import Alamofire
+import Kingfisher
 
 class ViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var tableView: UITableView!
@@ -33,8 +34,12 @@ extension ViewController: UITableViewDataSource {
         if (!apiService.character.isEmpty) {
             
             cell.textLabel?.text = apiService.character[indexPath.row].name
+            let url = URL(string: apiService.character[indexPath.row].thumbnail.url)
+            cell.imageView?.kf.setImage(with: url)
+            
         }
         return cell
+        
     }
     
     
