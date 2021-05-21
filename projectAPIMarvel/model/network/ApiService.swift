@@ -19,7 +19,7 @@ class ApiService {
     let privateKey = "458e3dedc56e090294f35a8c16abfa63bee16b11"
     let publicKey = "d9170f7cc7317a4f78fcc0323c3c7d15"
     let ts = String(Date().timeIntervalSince1970)
-    var charactersResponse: ReturnApi?
+    var character: [Result] = []
     var delegate: ApiResponse?
     
     // MARK: - Request
@@ -27,19 +27,18 @@ class ApiService {
     public func apiRequest(id: Int){
         let parameters = ["ts": ts, "hash" : self.getMD5(),  "apikey" : publicKey]
         let baseURL: String = "http://gateway.marvel.com/v1/public/characters"
-        let request = AF.request(baseURL, parameters: parameters).responseJSON(completionHandler: { (data) in
+        _ = AF.request(baseURL, parameters: parameters).responseJSON(completionHandler: { (data) in
             let result = try? JSONDecoder().decode(ReturnApi.self, from: data.data!)
-            self.charactersResponse = result
-            if (self.charactersResponse == nil) {
-                self.delegate?.error()
-            }else{
-                
-                self.delegate?.success()
+            if (result?.data.results != nil){
+                self.character = result!.data.results
+                if (self.character.isEmpty) {
+                    self.delegate?.error()
+                }else{
+                    
+                    self.delegate?.success()
+                }
             }
-            
-
         })
-        
     }
 
     // MARK: - MD5
